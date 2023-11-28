@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style2.css"> 
+
+</head>
+
+<!-- <style>
+body {
+    background-color: #ffffff;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .topnav-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .topnav-right {
+    float: right;
+  }
+  
+
+  @media screen and (max-width: 600px) {
+    .topnav a, .topnav-right {
+      float: none;
+      display: block;
+    }
+    
+    .topnav-centered a {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+  } -->
+
+
+</style>
+
+<body>
+       <!-- <div class="home-container">
+        <a href="index.html">HOME</a>
+        <a href="index.html">NEXT</a>
+    </div> -->
+
+    
+    <!-- <div class="image-container">
+        <img class="overlay-image" src="图片/bian.png" alt="Your Image">
+    </div>
+
+    <div class="image-container2">
+        <img class="overlay-image2" src="图片/bian2.png" alt="Your Image">
+    </div> -->
+    
+
+    <div class="topnav">
+        <!-- Centered link -->
+        <div class="topnav-centered">
+          <a href="index.html" class="active">Home</a>
+        </div>
+        
+    
+        <a href="page1.html">Pervious</a>
+        
+       
+        <div class="topnav-right">
+         <a href="page3.html">NEXT</a>
+        </div>
+        
+      </div>
+
+
+
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="图片/V1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="dialog-container">
+        <div class="dialog-box" id="dialog-box-left">
+            <p id="left-dialog">...</p>
+            <button class="dialog-button" id="left-button">·CLICK ME FIRST·</button>
+        </div>
+        <div class="dialog-box" id="dialog-box-right">
+            <p id="right-dialog">...</p>
+            <button class="dialog-button" id="right-button">·THEN CLICK ME·</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        const leftDialog = document.getElementById('left-dialog');
+        const rightDialog = document.getElementById('right-dialog');
+        const leftButton = document.getElementById('left-button');
+        const rightButton = document.getElementById('right-button');
+        const dialogBoxLeft = document.getElementById('dialog-box-left');
+        const dialogBoxRight = document.getElementById('dialog-box-right');
+
+        const dialogText = [
+            'Ah, I want to see the fireworks.',
+            'What kind of fireworks?',
+            'The fireworks from my childhood.',
+            'I feel like the memories are the fireworks of my childhood.',
+            'Its been a long time since we‘ve had fireworks.',
+            'Me too. Ever since they banned fireworks.',
+            'Yeah, its like my childhood ended there, too.',
+            'Me too.',
+            'For me, there are three stages to a firework.',
+            'What does it mean?',
+            'Anticipation, joy, and solitude.',
+            'Oh yes, I look forward to the early morning fireworks at the end of every year.',
+            'Yes, and will be speechless with joy over the fireworks.',
+            'Is it lonely because the fireworks went out?',
+            'Yes.',
+            'That is just like life.',
+        ];
+        
+
+        let currentIndex = 0;
+
+        leftButton.addEventListener('click', () => {
+            if (currentIndex < dialogText.length) {
+                leftDialog.textContent = dialogText[currentIndex];
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+                leftDialog.textContent = dialogText[currentIndex];
+                currentIndex++;
+            }
+        });
+
+        rightButton.addEventListener('click', () => {
+            if (currentIndex < dialogText.length) {
+                rightDialog.textContent = dialogText[currentIndex];
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+                rightDialog.textContent = dialogText[currentIndex];
+                currentIndex++;
+            }
+        });
+    </script>
+</body>
+</html>

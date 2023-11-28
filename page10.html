@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style10.css"> 
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #videoPlayer {
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topnav">
+        <div class="topnav-centered">
+          <a href="index.html" class="active">Home</a>
+        </div>
+    
+        <a href="page9.html">Pervious</a>
+        
+        <div class="topnav-right">
+         <a href="index.html">Next</a>
+        </div>
+    </div>
+
+    <button id="showVideo">The fireworks of my childhood</button>
+    <video id="videoPlayer" width="320" height="240" loop muted>
+        <source src="图片/IMG_4323 2.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        var videoPlayer = document.getElementById('videoPlayer');
+        var button = document.getElementById('showVideo');
+
+        var videos = ['图片/IMG_4323 2.mp4', '图片/vv2.mov', '图片/vv3.mov'];
+        var currentVideoIndex = 0;
+
+        button.addEventListener('click', function() {
+            videoPlayer.style.display = 'block';
+            button.style.display = 'none'; 
+            videoPlayer.play(); 
+        });
+
+        videoPlayer.addEventListener('click', function() {
+            currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+            videoPlayer.setAttribute('src', videos[currentVideoIndex]);
+            videoPlayer.play();
+        });
+    </script>

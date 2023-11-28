@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Document</title>
+<link rel="stylesheet" href="CSS/style6.css"> 
+</head>
+<body>
+    
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="图片/bb2.jpg"  style="width:100%">
+      <h4>2022/1/31</h4>
+      <p>Rickshaw on New Year's Eve</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="图片/bb3.jpg" style="width:100%">
+      <h4>2021/2/6</h4>
+      <p>A strange old man on New Year's morning</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="图片/bb4.jpg" style="width:100%">
+      <h4>2022/2/8</h4>
+      <p>On New Year's Day we secretly set off fireworks</p>
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+      <img src="图片/bb7.jpg" alt="Car" style="width:100%">
+      <h4>2022/2/1</h4>
+      <p>Moths Outside the Glass Window</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="图片/bb8.jpg" alt="Car" style="width:100%">
+      <h4>2022/2/2</h4>
+      <p>The God of Fortune</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="图片/bb9.jpg" alt="Car" style="width:100%">
+      <h4>2023/2/10</h4>
+      <p>A New Year's Day in New York</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="图片/bb1.jpg" alt="Car" style="width:100%">
+      <h4>2020/2/4</h4>
+      <p>Blessings from Mount Qingcheng</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="图片/bb5.jpg" alt="Car" style="width:100%">
+      <h4>2019/2/3</h4>
+      <p>New Year's Dumplings</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="图片/bb6.jpg" alt="Car" style="width:100%">
+      <h4>2019/2/4</h4>
+      <p>Last days in Changning District</p>
+    </div>
+  </div>
+</div>
+
+<div class="topnav">
+
+    <div class="topnav-centered">
+      <a href="index.html" class="active">Home</a>
+    </div>
+    
+ 
+    <a href="page5.html">Previous</a>
+    <!-- <a href="#contact">Contact</a> -->
+    
+
+    <div class="topnav-right">
+      <!-- <a href="page1.html">NEXT</a> -->
+      <a href="page9.html">Next</a>
+    </div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>

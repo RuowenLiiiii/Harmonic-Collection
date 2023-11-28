@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style5.css"> 
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+        <div class="column left">
+            <span class="dot" style="background:#ED594A;"></span>
+            <span class="dot" style="background:#FDD800;"></span>
+            <span class="dot" style="background:#5AC05A;"></span>
+        </div>
+        <div class="column middle">
+            <input type="text" value="How to make scars heal fast?">
+        </div>
+        <div class="column right">
+            <div style="float:right">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </div>
+      <!-- <div class="content">
+        <div class="vertical-center">
+          <p id="demo"></p>
+            <button onclick="typeWriter()">Click me</button>
+        </div> -->
+    </div>
+
+ <div class="content">
+          <p>About 7,230,000,000 results (0.33 seconds)</p>
+          <div class="result-item">
+              <h3>USE TOOTHPASTE</h3>
+              <p>I dont remember how long ago it was, probably when I was four or five. I was in the yard setting off fireworks when I got the right side of my face blown up by a firework, and I dont remember much about that memory. I only remember that after that time, my parents would always put some toothpaste on my face every night. I later realized that they did that to make the injury heal faster so that it wouldn't leave a scar. I can't say whether this method worked or not, but that scar slowly split into two moles on my face because of growth.</p>
+              <p>More items... •Jul 6, 2022</p>
+          </div>
+  </div>
+</div>
+
+    
+    <!-- <script>
+var i = 0;
+var txt = 'I dont remember how long ago it was, probably when I was four or five. I was in the yard setting off fireworks when I got the right side of my face blown up by a firework, and I dont remember much about that memory. I only remember that after that time, my parents would always put some toothpaste on my face every night. I later realized that they did that to make the injury heal faster so that it wouldnt leave a scar. I cant say whether this method worked or not, but that scar slowly split into two moles on my face because of growth.';
+var speed = 70; // 每个字符的显示速度
+
+function typeWriter() {
+    if (i < txt.length) {
+        document.getElementById("demo").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
+</script>  -->
+
+
+<div class="spacer"></div>
+
+<div class="top2">
+  <span class="dot2" style="background:#ED594A;"></span>
+  <span class="dot2" style="background:#FDD800;"></span>
+  <span class="dot2" style="background:#5AC05A;"></span>
+</div>
+
+<div id="myDIV" class="header">
+    <h2 style="margin:20px">Our New Year's List</h2>
+    <input type="text" id="myInput" placeholder="Title...">
+    <span onclick="newElement()" class="addBtn">Add</span>
+  </div>
+  
+  <ul id="myUL">
+    <li>Firecrackers</li>
+    <li class="checked">Toothpaste</li>
+    <li>Sparklers</li>
+    <li>Ground Spinners</li>
+    <li>Chrysanthemum Firework</li>
+    <li>Snacks</li>
+  </ul>
+</div>
+  
+  <script>
+  // Create a "close" button and append it to each list item
+  var myNodelist = document.getElementsByTagName("LI");
+for (var j = 0; j < myNodelist.length; j++) { 
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[j].appendChild(span); 
+}
+  
+  // Click on a close button to hide the current list item
+  var close = document.getElementsByClassName("close");
+for (var k = 0; k < close.length; k++) { 
+    close[k].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+    }
+}
+  
+  // Add a "checked" symbol when clicking on a list item
+  var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
+    }
+}, false);
+
+  
+  // Create a new list item when clicking on the "Add" button
+  function newElement() {
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("myInput").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+        alert("You must write something!");
+    } else {
+        document.getElementById("myUL").appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
+
+    for (var m = 0; m < close.length; m++) { 
+        close[m].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+        }
+    }
+}
+  </script>
+
+
+<div class="topnav">
+
+    <div class="topnav-centered">
+      <a href="index.html" class="active">Home</a>
+    </div>
+    
+ 
+    <a href="page4.html">Previous</a>
+    
+
+    <div class="topnav-right">
+      <a href="page6.html">Next</a>
+    </div>
+      
+</body>
+</html>

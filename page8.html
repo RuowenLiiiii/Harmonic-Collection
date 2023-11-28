@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style8.css"> 
+</head>
+<body>
+    <div class="topnav">
+
+        <div class="topnav-centered">
+          <a href="index.html" class="active">Home</a>
+        </div>
+        
+     
+        <a href="page7.html">Previous</a>
+        
+    
+        <div class="topnav-right">
+          <a href="page10.html">Next</a>
+        </div>
+
+    <div class="grid-container">
+        <div class="grid-item grid1" style="background-image: url('图片/b1.jpg');"></div>
+        <div class="grid-item grid2" style="background-image: url('图片/b2.jpg');"></div>
+        <div class="grid-item grid3" style="background-image: url('图片/b3.JPG');"></div>
+        <div class="grid-item grid4" style="background-image: url('图片/b4.JPG');"></div>
+        <div class="grid-item grid5" style="background-image: url('图片/b5.jpg');"></div>
+        <div class="grid-item grid6" style="background-image: url('图片/b6.JPG');"></div>
+        <div class="grid-item grid4" style="background-image: url('图片/b7.JPG');"></div>
+        <div class="grid-item grid5" style="background-image: url('图片/b8.jpg');"></div>
+        <div class="grid-item grid6" style="background-image: url('图片/b9.jpg');"></div>
+        <div class="grid-item grid6" style="background-image: url('图片/b10.jpg');"></div>
+
+        <div class="grid-item grid1">
+            <button class="story-btn"></button>
+          </div>
+          <div class="grid-item grid2">
+            <button class="story-btn"></button>
+          </div>
+          <div class="grid-item grid3">
+            <button class="story-btn"></button>
+          </div>
+          <div class="grid-item grid4">
+            <button class="story-btn"></button>
+          </div>
+          <div class="grid-item grid5">
+            <button class="story-btn"></button>
+          </div>
+          <div class="grid-item grid6">
+            <button class="story-btn"></button>
+          </div>
+          <div class="grid-item grid7">
+            <button class="story-btn"></button>
+          </div>
+          <div class="grid-item grid8">
+            <button class="story-btn"></button>
+          </div>
+          <div class="grid-item grid9">
+            <button class="story-btn"></button>
+          </div>
+          <div class="grid-item grid10">
+            <button class="story-btn"></button>
+          </div>
+
+
+          <script>
+            document.querySelectorAll('.story-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var modal = document.createElement('div');
+    modal.classList.add('story-modal');
+
+    // 添加故事内容
+    modal.innerHTML = '<div class="loader"></div>';
+
+    // 添加关闭按钮
+    var closeButton = document.createElement('button');
+    closeButton.innerText = 'Close';
+    closeButton.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+
+    modal.appendChild(closeButton);
+
+    document.body.appendChild(modal);
+
+    // 显示故事
+    modal.style.display = 'block';
+  });
+});
+          </script>
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+* {box-sizing: border-box;}
+
+body {
+  padding-bottom: 50px; /* 根据 .topnav 的高度调整 */
+  /* 其他样式保持不变 */
+}
+
+body, html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-comp-container {
+  position: relative;
+  width: 70vw; /* 视口宽度的 50% */
+  height: 70vh; /* 视口高度的 50% */
+  max-width: 250px; /* 图片原始宽度的 50% */
+  max-height: 200px; /* 图片原始高度的 50% */
+}
+
+.img-comp-img, .img-comp-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.img-comp-img img, .img-comp-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 确保图片不失真 */
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  /* 调整滑块大小 */
+  width: 20px; /* 之前是 40px，现在缩小为 20px */
+  height: 20px; /* 之前是 40px，现在缩小为 20px */
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+
+.topnav {
+  position: fixed; /* 改为 fixed 以固定在屏幕底部 */
+  bottom: 0; /* 置于底部 */
+  left: 0; /* 从左侧开始 */
+  width: 100%; /* 使其宽度与屏幕宽度一致 */
+  overflow: hidden;
+  background-color: #ffffff;
+  z-index: 10; /* 确保它在页面其他内容之上 */
+}
+
+.topnav a {
+  float: left;
+  color: #bdbdbd;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:rgb(159, 159, 159);
+  color: white;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+}
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+  
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
